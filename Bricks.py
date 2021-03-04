@@ -24,4 +24,6 @@ dataset = image_generator.flow_from_directory(directory=str(data_directory),
 
 print("oHAAAAAA 3")
 image_batch, label_batch = next(dataset)
-print("oHAAAAAA 3")
+print("oHAAAAAA 4")
+list_dataset = tf.data.Dataset.list_files(str(data_directory/'*/*'))
+print("oHAAAAAA 5")
