@@ -1,5 +1,8 @@
 # from https://keras.io/examples/vision/image_classification_from_scratch/
 
+# also from https://www.youtube.com/watch?v=cvyDYdI2nEI&t=985s
+# his git with all data: https://github.com/TannerGilbert/Tensorflow-Object-Detection-API-Train-Model
+
 print("starting")
 import tensorflow as tf
 from tensorflow import keras
@@ -8,9 +11,15 @@ import os
 
 print("done importing")
 
+pets_pics_dir = "PetImages"
+trainBR50_pics_dir = "TrainBR50"
+
+
 num_skipped = 0
-for folder_name in ("Cat", "Dog"):
-    folder_path = os.path.join("PetImages", folder_name)
+#for folder_name in ("Cat", "Dog"):
+for folder_name in ("TrainBR50"):
+    #folder_path = os.path.join(pets_pics_dir, folder_name)
+    folder_path = trainBR50_pics_dir
     for fname in os.listdir(folder_path):
         fpath = os.path.join(folder_path, fname)
         try:
